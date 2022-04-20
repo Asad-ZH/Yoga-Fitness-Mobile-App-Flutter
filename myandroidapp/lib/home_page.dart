@@ -7,6 +7,7 @@ import 'Fitness_files/flexibilty_essentials.dart';
 import 'NavBar.dart';
 import 'package:video_player/video_player.dart';
 
+import 'REST_API/RestApi.dart';
 import 'Settings.dart';
 
 class HomePage extends StatefulWidget {
@@ -185,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => StickNotes()),
+                                builder: (context) => Settings()),
                           );
                         },
                        child: Container(
