@@ -18,7 +18,7 @@ class Todo {
     data['userId'] = this.userId.toString();
     data['id'] = this.id.toString();
     data['title'] = this.title;
-    data['completed'] = this.completed;
+    data['completed'] = this.completed.toString();
     return data;
   }
 }
