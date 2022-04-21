@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'Fitness_files/flexibilty_essentials.dart';
 import 'NavBar.dart';
+import 'REST_API/RestApi.dart';
 import 'SecondScreen.dart';
 import 'Settings.dart';
 import 'home_page.dart';
 import 'sticky_notes.dart';
 
-void main() => runApp(MaterialApp(home: HomePage()));
+void main() => runApp(MaterialApp(home: RestApi()));
 
 class LoginPage extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
