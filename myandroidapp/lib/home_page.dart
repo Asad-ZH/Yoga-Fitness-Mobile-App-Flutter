@@ -3,14 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:myandroidapp/main.dart';
 import 'package:myandroidapp/sticky_notes.dart';
+import 'Fitness_files/Balance_essentials.dart';
+import 'Fitness_files/Chest_Opener.dart';
+import 'Fitness_files/Strength_essentials.dart';
+import 'Fitness_files/Upper Back & Neck.dart';
 import 'Fitness_files/flexibilty_essentials.dart';
+import 'Fitness_files/healthy_back.dart';
+import 'Fitness_files/hip_opener.dart';
+import 'Fitness_files/neck_and_shoulder.dart';
+import 'Fitness_files/upper_back.dart';
 import 'NavBar.dart';
 import 'package:video_player/video_player.dart';
 
-import 'REST_API/RestApi.dart';
 import 'Settings.dart';
+import 'fitness.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -37,9 +47,6 @@ class _HomePageState extends State<HomePage> {
     controller.dispose();
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
 
@@ -50,7 +57,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.black,
         title:Image.network(
-          'https://github.com/Asad-ZH/yoga-flutter-app/blob/main/myandroidapp/assets/appbarlogo.jpg?raw=true',
+          "https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/appbarlogo.jpg?raw=true",
           fit: BoxFit.contain,
           height: 50,
         ),
@@ -154,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => StickNotes()),
+                                builder: (context) => Fitness()),
                           );
                         },
                         child: Container(
@@ -169,9 +176,8 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children:[
-
                               Image.network(
-                              "https://github.com/Asad-ZH/yoga-flutter-app/blob/main/myandroidapp/assets/fitness.png?raw=true",
+                              "https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/fitness.png?raw=true",
                               fit: BoxFit.contain,
                               height: 80,
                               ),
@@ -203,7 +209,7 @@ class _HomePageState extends State<HomePage> {
 
                              children:[
                                Image.network(
-                                 "https://github.com/Asad-ZH/yoga-flutter-app/blob/main/myandroidapp/assets/diet.png?raw=true",
+                                 "https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/diet.png?raw=true",
                                  fit: BoxFit.contain,
                                  height: 60,
                                ),
@@ -233,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                              mainAxisAlignment: MainAxisAlignment.center,
                              children:[
                                Image.network(
-                                 "https://github.com/Asad-ZH/yoga-flutter-app/blob/main/myandroidapp/assets/resume.png?raw=true",
+                                 "https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/sticky-notes.png?raw=true",
                                  fit: BoxFit.contain,
                                  height: 60,
                                ),
@@ -276,11 +282,28 @@ class _HomePageState extends State<HomePage> {
                                   builder: (context) => FlexibiltyEssentials()),
                               );
                             },
-                  ),
-                      buildImageInteractionCard02(),
-                      buildImageInteractionCard03(),
+                      ),
+                      GestureDetector(
+                        child: buildImageInteractionCard02(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StrengthEssentials()),
+                          );
+                        },
+                      ),
+                      GestureDetector(
+                        child: buildImageInteractionCard03(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BalanceEssentials()),
+                          );
+                        },
+                      ),
                     ],
-
                   ),
                 ),
 
@@ -305,15 +328,33 @@ class _HomePageState extends State<HomePage> {
                       GestureDetector(
                         child: buildImageInteractionCard11(),
                         onTap: (){
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => FlexibiltyEssentials()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChestOpener()),
+                          );
                         },
                       ),
-                      buildImageInteractionCard12(),
-                      buildImageInteractionCard13(),
+                      GestureDetector(
+                        child: buildImageInteractionCard12(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HipOpener()),
+                          );
+                        },
+                      ),
+                      GestureDetector(
+                        child: buildImageInteractionCard13(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UpperBackNeck()),
+                          );
+                        },
+                      ),
                     ],
 
                   ),
@@ -337,9 +378,36 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     children: [
 
-                      buildImageInteractionCard21(),
-                      buildImageInteractionCard22(),
-                      buildImageInteractionCard23(),
+                      GestureDetector(
+                        child: buildImageInteractionCard21(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HealthyBack()),
+                          );
+                        },
+                      ),
+                      GestureDetector(
+                        child: buildImageInteractionCard22(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NeckShoulders()),
+                          );
+                        },
+                      ),
+                      GestureDetector(
+                        child: buildImageInteractionCard23(),
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UpperBack()),
+                          );
+                        },
+                      ),
                     ],
 
                   ),
@@ -403,6 +471,10 @@ class _HomePageState extends State<HomePage> {
       ],
     ),
   );
+
+  //===========================================================================================================
+
+
   Widget buildImageInteractionCard02() =>  Card(
     color: Colors.grey.withOpacity(0.2),
 

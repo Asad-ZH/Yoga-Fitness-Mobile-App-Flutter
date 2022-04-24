@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class  FlexibiltyEssentials extends StatelessWidget {
+class  BalanceEssentials extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   String name = "";
 
@@ -33,7 +33,7 @@ class  FlexibiltyEssentials extends StatelessWidget {
                     image: DecorationImage(
                       colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
                       image: NetworkImage(
-                          "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        'https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
                       ),
                       fit: BoxFit.cover,
                     )),
@@ -46,7 +46,7 @@ class  FlexibiltyEssentials extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Flexibility Essentials", style: TextStyle(color: Colors.white,fontSize: 24)),
+                    Text("Balance Essentials", style: TextStyle(color: Colors.white,fontSize: 24)),
                     SizedBox(height: 20,),
                     Text("This routine is design to Stretch little bit of everything ",style: TextStyle(color: Colors.white)),
                   ],

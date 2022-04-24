@@ -42,7 +42,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
           centerTitle: true,
           backgroundColor: Colors.black,
           title:Image.network(
-            'https://github.com/Asad-ZH/yoga-flutter-app/blob/main/myandroidapp/assets/appbarlogo.jpg?raw=true',
+            "https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/appbarlogo.jpg?raw=true",
             fit: BoxFit.contain,
             height: 50,
           ),
