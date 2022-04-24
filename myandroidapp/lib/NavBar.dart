@@ -17,12 +17,10 @@ class NavBar extends StatelessWidget {
                 accountName: Text('Ali Hasan'),
                 accountEmail: Text('Alihasan8096@gmail.com'),
               currentAccountPicture: CircleAvatar(
-                child: Image.network(
-                    'https://images.unsplash.com/photo-1618517048316-755f0a0a366e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fG1lbWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                    width:90,
-                    height:90,
-                  fit: BoxFit.cover,
-                ),
+                radius: 30.0,
+                backgroundImage:
+                NetworkImage('https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'),
+                backgroundColor: Colors.transparent,
               ),
               decoration: BoxDecoration(
                 image: DecorationImage(

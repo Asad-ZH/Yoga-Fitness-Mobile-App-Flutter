@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myandroidapp/Fitness_files/sub_fitness_file/upper_back_and_neck_info.dart';
 
 class  UpperBackNeck extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -102,15 +103,17 @@ class  UpperBackNeck extends StatelessWidget {
                     width: 500,
                   ),
                   ElevatedButton(
-                    child: Text('ElevatedButton'),
-                    style: ElevatedButton.styleFrom(
-                        primary: Color.fromRGBO(4, 254, 179,0.3),
-                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                        textStyle: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold)),
-                    onPressed: () {},
-
+                      child: Text('ElevatedButton'),
+                      style: ElevatedButton.styleFrom(
+                          primary: Color.fromRGBO(4, 254, 179,0.3),
+                          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          textStyle: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold)),
+                      onPressed: () => Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context) => UpperBackNeckInfo()),
+                      )
                   ),
 
 

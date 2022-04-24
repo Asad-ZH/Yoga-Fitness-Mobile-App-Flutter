@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myandroidapp/Fitness_files/sub_fitness_file/healthy_back__info.dart';
+import 'package:myandroidapp/Fitness_files/sub_fitness_file/Balance_essentials_info.dart';
+import 'package:myandroidapp/Fitness_files/sub_fitness_file/Strength_essentials_info.dart';
 
-class  HealthyBack extends StatelessWidget {
+class Diet2 extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   String name = "";
 
@@ -34,7 +35,7 @@ class  HealthyBack extends StatelessWidget {
                     image: DecorationImage(
                       colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
                       image: NetworkImage(
-                          "https://images.unsplash.com/photo-1570691079236-4bca6c45d440?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                          "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                       ),
                       fit: BoxFit.cover,
                     )),
@@ -47,52 +48,33 @@ class  HealthyBack extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Healthy Back", style: TextStyle(color: Colors.white,fontSize: 24)),
-                    SizedBox(height: 20,),
-                    Text("This routine is design to Stretch little bit of everything ",style: TextStyle(color: Colors.white)),
+                    Text("Flourless Pancakes", style: TextStyle(color: Colors.white,fontSize: 24)),
                   ],
                 ),
               ),
 
               Container(
                 decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: Colors.green.withOpacity(0.4)),
+                    border: Border.all(width: 1, color: Colors.brown),
                     color: Colors.grey.withOpacity(0.2),
                     borderRadius: const BorderRadius.all(const Radius.circular(8))
                 ),
 
-                height: MediaQuery.of(context).size.height * 0.26,
+                height: MediaQuery.of(context).size.height * 0.23,
                 margin: EdgeInsets.fromLTRB(
                     MediaQuery.of(context).size.width * 0.05,
                     MediaQuery.of(context).size.width * 0.6,
                     MediaQuery.of(context).size.width * 0.05,
                     0),
-                child: ListView(
+                child: Container(
+                    padding: EdgeInsets.fromLTRB(
+                      MediaQuery.of(context).size.width * 0.05,
+                      MediaQuery.of(context).size.width * 0.05,
+                      MediaQuery.of(context).size.width * 0.05,
+                      MediaQuery.of(context).size.width * 0.05,
 
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    ListTile(
-                      leading: Icon(Icons.alarm_rounded, color: Colors.white),
-                      title:Text('Duration',style: TextStyle(color: Colors. white),),
-                      onTap: () =>null,
                     ),
-                    Divider(),
-                    ListTile(
-                      leading: Icon(Icons.fitness_center, color: Colors.white),
-                      title:Text('Difficulty',style: TextStyle(color: Colors. white),),
-                      onTap: () =>null,
-                    ),
-                    Divider(),
-                    ListTile(
-                      leading: Icon(Icons.audiotrack_outlined, color: Colors.white),
-                      title:Text('Sound',style: TextStyle(color: Colors. white),),
-
-                      onTap: () =>null,
-                    ),
-
-
-                  ],
-                ),
+                    child: Text("The Blackstone nutrition plan helps you reach your goals faster.If you eat well according to the nutrition plan, you collect points everyday. More points mean faster progress through healthier nutrition. Very Simple, very flexible. ",style: TextStyle(fontSize: 16,color: Colors.white),))
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -103,17 +85,14 @@ class  HealthyBack extends StatelessWidget {
                     width: 500,
                   ),
                   ElevatedButton(
-                      child: Text('ElevatedButton'),
+                      child: Text('Unlock Premium'),
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(4, 254, 179,0.3),
+                          primary: Colors.brown,
                           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                           textStyle: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold)),
-                      onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(
-                            builder: (context) => HealthyBackInfo()),
-                      )
+                      onPressed: () => {}
                   ),
 
 

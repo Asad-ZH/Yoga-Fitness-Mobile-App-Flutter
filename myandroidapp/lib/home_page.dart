@@ -16,6 +16,7 @@ import 'NavBar.dart';
 import 'package:video_player/video_player.dart';
 
 import 'Settings.dart';
+import 'diet_files/diet_main_page.dart';
 import 'fitness.dart';
 
 class HomePage extends StatefulWidget {
@@ -192,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Settings()),
+                                builder: (context) => Diet()),
                           );
                         },
                        child: Container(
@@ -429,6 +430,7 @@ class _HomePageState extends State<HomePage> {
 
     );
   }
+  //===========================================================================================================
 
   Widget buildImageInteractionCard01() =>  Card(
     color: Colors.grey.withOpacity(0.2),
@@ -472,7 +474,6 @@ class _HomePageState extends State<HomePage> {
     ),
   );
 
-  //===========================================================================================================
 
 
   Widget buildImageInteractionCard02() =>  Card(

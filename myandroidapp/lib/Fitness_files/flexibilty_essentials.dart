@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myandroidapp/Fitness_files/sub_fitness_file/flexibilty_essentials_info.dart';
 
 class  FlexibiltyEssentials extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -109,11 +110,11 @@ class  FlexibiltyEssentials extends StatelessWidget {
                         textStyle: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold)),
-                    onPressed: () {},
-
+                    onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(
+                    builder: (context) => FlexibiltyEssentialsInfo()),
+                    )
                   ),
-
-
 
                 ],
               ),

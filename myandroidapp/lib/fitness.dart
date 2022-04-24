@@ -29,10 +29,8 @@ class  Fitness extends StatelessWidget {
 
 
               Container(
-
                 height: MediaQuery.of(context).size.height * 0.15,
                 alignment: Alignment.topCenter,
-
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
