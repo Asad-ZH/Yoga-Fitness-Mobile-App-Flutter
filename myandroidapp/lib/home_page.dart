@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     controller = VideoPlayerController.network(
-        'https://www.shutterstock.com/video/clip-1061606293-silhouette-fitness-woman-practicing-asana-yoga-pose');
+        'https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/videos/yoga-video.mp4?raw=true');
       initialVideoPlayer = controller.initialize();
       super.initState();
       controller.setLooping(true);
