@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    controller = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4');
+    controller = VideoPlayerController.asset(
+        'assets/videos/yoga-video.mp4');
       initialVideoPlayer = controller.initialize();
       super.initState();
       controller.setLooping(true);

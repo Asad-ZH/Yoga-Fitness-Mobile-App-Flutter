@@ -13,12 +13,15 @@ class LoginPage extends StatelessWidget {
     final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Container(
+
       child: Scaffold(
+        resizeToAvoidBottomInset : false,
+
         key: _scaffoldKey,
         body: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('black.jpg'),
+                image: NetworkImage('https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/black.jpg?raw=true'),
                 fit: BoxFit.cover,
               )),
           // decoration: BoxDecoration(color: Colors.black),
@@ -37,7 +40,7 @@ class LoginPage extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 16 / 9, //aspect ratio for Image
                     child: Image(
-                      image: AssetImage('logo1.png'),
+                      image: NetworkImage('https://github.com/Asad-ZH/yoga-app/blob/main/myandroidapp/assets/logo1.png?raw=true'),
                     ),
                   ),
                   SizedBox(height: height * 0.01),
@@ -127,9 +130,9 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Container(
                         margin: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.2),
+                            left: MediaQuery.of(context).size.width * 0.15),
                         height: MediaQuery.of(context).size.height * 0.06,
-                        width: MediaQuery.of(context).size.width * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.25,
                         child: ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
@@ -154,9 +157,9 @@ class LoginPage extends StatelessWidget {
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            right: MediaQuery.of(context).size.width * 0.2),
+                            right: MediaQuery.of(context).size.width * 0.15),
                         height: MediaQuery.of(context).size.height * 0.06,
-                        width: MediaQuery.of(context).size.width * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.25,
                         child: ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
